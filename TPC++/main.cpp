@@ -4,6 +4,14 @@
 using namespace cv;
 using namespace std;
 
+// git status
+// git add -u
+// git status
+// git commit -m <nom>
+// git status
+// git log
+// git push 
+// git log
 int main(){
 Mat img=imread("myImage.jpg");
 Rect r=Rect(10,20,40,60);
