@@ -8,7 +8,7 @@ int main(){
 Mat img=imread("myImage.jpg");
 Rect r=Rect(10,20,40,60);
 rectangle(img,r,Scalar(255,0,0),1,8,0);
-
+//coment
   
 Mat wee(200, 200, CV_8UC3, Scalar(255, 255, 255));
 Point center(100, 100);
