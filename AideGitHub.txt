@@ -1,5 +1,6 @@
 Se connecter à github et au projet:
 	git config --global user.name L-Duchenne
+	git config --global user.email "monadressemail@serveur.com"
 	git remote add origin https://github.com/raianC/tpc.git
 
 Voir Si tout est en ordre:
