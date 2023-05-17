@@ -1,0 +1,30 @@
+Se connecter à github et au projet:
+	git config --global user.name L-Duchenne
+	git remote add origin https://github.com/raianC/tpc.git
+
+Voir Si tout est en ordre:
+	git log
+	git status
+
+Manipumation des branches:
+ 	git branch <nom_branche> # crée une branche en restant sur l’ancienne
+ 	git checkout -b <nom_branche> # crée une branche et va dessus
+ 	git switch -c <nom_branche> # crée une branche et va dessus
+ 	git branch -d <nom_branche> # supprime une branche fusionnée
+ 	git branch -D <nom_branche> # force la suppression
+ 	git branch -vv # affiche le détail des branches
+ 	git checkout <nom_branche> # change de branche
+ 	git switch <nom_branche> # change de branche
+
+Rajouter une branche à GitHub:
+	git --set-upstream origin "Nom de la branche"
+
+Acces au branche des autres:
+	git fetch origin
+
+Ajout d'un fichier modifié dans GitHub:
+	git status //pour voir tout les changement
+	git add -u
+	git commit -m "Nom du commit"
+	git push 
+	git log // voir si tout est en ordre
