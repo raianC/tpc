@@ -1,56 +1,29 @@
-#include "opencv2/opencv.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include <iostream>
-using namespace cv;
-using namespace std;
-//
-// on le met en reusinage 
-// 
-// 
-// !!!!!!!!!!!! pour certains exercices on a utilisé le meme ordinateur pour coder !!!!!!!!!!!
-//
+#include "Circle.h"
+#include "Rectangle.h"
 
-void dessinerRectangle() {
-	// Fonction qui dessine un rectangle bleu.
+int main() {
+        cv::Mat image(500, 500, CV_8UC3, cv::Scalar(255, 255, 255));  // Création d'une image blanche
 
-	Mat fondBlanc(200, 200, CV_8UC3, Scalar(255, 255, 255));
-	Rect rectangle_ = Rect(10, 20, 40, 60);
-	namedWindow("whiteMatrix");
-	rectangle(fondBlanc, rectangle_, Scalar(255, 0, 0), 1, 8, 0);
-	imshow("WhiteMatrix", fondBlanc);
-	waitKey(0);
+        Circle circle(cv::Point(250, 250), 100, cv::Scalar(0, 0, 255));  // Création d'un cercle rouge
 
-}
+        circle.draw(image);  // Dessin du cercle sur l'image
 
-void dessinerCercle(){ 
-	//Fonction qui dessine un cercle noir.
-
-	Mat fondBlanc(200, 200, CV_8UC3, Scalar(255, 255, 255));
-	Point center(100, 100);
-	int radius = 50;
-	Scalar line_Color(0, 0, 0);
-	int thickness = 2;
-	namedWindow("whiteMatrix");
-	circle(fondBlanc, center, radius, line_Color, thickness);
-	imshow("WhiteMatrix", fondBlanc);
-
-	waitKey(0);
-
-}
+        cv::imshow("Circle", image);  // Affichage de l'image avec le cercle
+        cv::waitKey(0);  // Attente d'une touche pour fermer la fenêtre
 
 
-int main(){
 
-	dessinerRectangle();
-	dessinerCercle();
 
+        cv::Mat image1(500, 500, CV_8UC3, cv::Scalar(255, 255, 255));  // Création d'une image blanche
+
+        Rectangle rectangle(cv::Point(400, 400), cv::Point(200, 200), cv::Scalar(0, 0, 255));  // Création d'un rectangle rouge
+
+        rectangle.draw(image1);  // Dessin du rectangle sur l'image
+
+        cv::imshow("Rectangle", image1);  // Affichage de l'image avec le rectangle
+        cv::waitKey(0);  // Attente d'une touche pour fermer la fenêtre
+
+        return 0;
+    }
 
   
-
-
-
-
-  
- 
-return 0;
-}
